@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discovery Chat — Nastasia Khmelnitski</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --dark:  #2E2E1E;
+    --mid:   #4A4A30;
+    --khaki: #7A7A58;
+    --sage:  #AEAE8E;
+    --cream: #F5F2E8;
+    --white: #FAFAF8;
+    --ink:   #1A1A10;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  .page { max-width: 780px; margin: 0 auto; padding: 0; }
+
+  /* HEADER */
+  .header {
+    background: var(--dark);
+    padding: 48px 52px 40px;
+    border-bottom: 3px solid var(--khaki);
+  }
+  .header-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--sage); margin-bottom: 14px; font-weight: 500; }
+  .header h1 { font-family: 'DM Serif Display', serif; font-size: 42px; font-weight: 400; color: var(--cream); line-height: 1.0; margin-bottom: 6px; }
+  .header h1 em { font-style: italic; color: var(--sage); }
+
+  /* BODY */
+  .body { padding: 48px 52px; }
+
+  /* SECTION */
+  .section { margin-bottom: 40px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .section-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--cream); line-height: 1; background: var(--mid); padding: 2px 12px; flex-shrink: 0; }
+  .section-num.pre { background: var(--khaki); font-size: 20px; padding: 4px 12px; }
+  .section-title { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--khaki); }
+  .section-line { flex: 1; height: 1px; background: var(--cream); }
+
+  /* PRE-DISCOVERY BLOCK */
+  .pre-block {
+    background: var(--mid);
+    padding: 24px 28px;
+    margin-bottom: 40px;
+    border-top: 2px solid var(--khaki);
+  }
+  .pre-block-title { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 16px; }
+  .pre-items { display: flex; flex-direction: column; gap: 10px; }
+  .pre-item { font-size: 13px; color: var(--cream); font-weight: 300; line-height: 1.6; padding-left: 20px; position: relative; }
+  .pre-item::before { content: '→'; position: absolute; left: 0; color: var(--sage); }
+
+  /* QUESTIONS */
+  .questions { display: flex; flex-direction: column; gap: 10px; }
+  .question { background: var(--cream); padding: 16px 20px; border-left: 3px solid var(--sage); display: flex; gap: 14px; align-items: flex-start; }
+  .question.primary { border-left-color: var(--mid); }
+  .question.note { background: var(--dark); border-left-color: var(--khaki); }
+  .q-num { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--sage); flex-shrink: 0; padding-top: 1px; min-width: 18px; }
+  .q-text { font-size: 14px; color: var(--ink); line-height: 1.5; font-weight: 400; }
+  .question.note .q-text { font-size: 13px; color: var(--sage); font-weight: 300; font-style: italic; }
+  .question.note .q-num { color: var(--khaki); }
+
+  /* CONTRACT BLOCK */
+  .contract { background: var(--dark); padding: 24px 28px; border-top: 2px solid var(--mid); margin-top: 8px; }
+  .contract-title { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 12px; }
+  .contract-items { display: flex; flex-direction: column; gap: 8px; }
+  .contract-item { font-size: 13px; color: var(--cream); font-weight: 300; line-height: 1.5; padding-left: 20px; position: relative; }
+  .contract-item::before { content: '→'; position: absolute; left: 0; color: var(--khaki); }
+
+  /* FOOTER */
+  footer { background: var(--dark); padding: 16px 52px; font-size: 10px; color: var(--khaki); letter-spacing: 2px; text-transform: uppercase; display: flex; justify-content: space-between; border-top: 1px solid var(--mid); flex-wrap: wrap; gap: 8px; }
+  footer em { color: var(--sage); font-style: normal; }
+
+  @media print {
+    body { background: white; }
+    .page { max-width: 100%; }
+    .header, .pre-block, .contract, footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="header-label">Coaching Tool</div>
+    <h1>Discovery<br><em>Coffee Chat</em></h1>
+  </div>
+
+  <div class="body">
+
+    <!-- PRE-DISCOVERY -->
+    <div class="pre-block">
+      <div class="pre-block-title">Before We Begin</div>
+      <div class="pre-items">
+        <div class="pre-item">Introduce yourself: your background, what you work on, who you work with, and what brought you to coaching.</div>
+        <div class="pre-item">Ask whether the client has ever worked with a coach before.</div>
+        <div class="pre-item">If needed, explain the difference between coaching and mentorship.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-title">Opening &amp; Context</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="questions">
+        <div class="question primary">
+          <div class="q-num">→</div>
+          <div class="q-text">Tell me about where you are right now, professionally and personally, in two or three sentences.</div>
+        </div>
+        <div class="question primary">
+          <div class="q-num">→</div>
+          <div class="q-text">What brought you here specifically, why now and why coaching?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title">The Topic &amp; Solutions</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="questions">
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What is the topic you most want to work on? Formulate a question you have.</div>
+        </div>
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What do you think is underneath that question?</div>
+        </div>
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What have you already tried?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title">Readiness &amp; Expectations</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="questions">
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What would need to change for this to feel like a success?</div>
+        </div>
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What do you expect coaching to do that you cannot do alone?</div>
+        </div>
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">How motivated are you to work on this topic, on a scale of 1 to 10?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title">Boundaries &amp; Resistance</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="questions">
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What would you not want to change, even if it came up?</div>
+        </div>
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">Is there anything that is off limits for you in this work?</div>
+        </div>
+        <div class="question">
+          <div class="q-num">→</div>
+          <div class="q-text">What would make you decide this is not for you?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div class="section-title">Closing the Discovery</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="questions">
+        <div class="question primary">
+          <div class="q-num">→</div>
+          <div class="q-text">Coaching can surface things you did not expect and ask you to sit with discomfort. How do you feel about that?</div>
+        </div>
+        <div class="question note">
+          <div class="q-num">!</div>
+          <div class="q-text">Name a change that coaching can bring that the client does not expect. Be honest about the process before contracting.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTRACT -->
+    <div class="contract">
+      <div class="contract-title">Contract</div>
+      <div class="contract-items">
+        <div class="contract-item">Clarify the number of sessions, frequency, and format</div>
+        <div class="contract-item">Confirm confidentiality and how notes are handled</div>
+        <div class="contract-item">Agree on what success looks like and how you will measure it</div>
+        <div class="contract-item">Name what the client commits to between sessions</div>
+        <div class="contract-item">Confirm that either party can pause or stop the process</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div>Discovery Chat Guide</div>
+    <em>Nastasia Khmelnitski &mdash; Coach for Creatives, Artists &amp; Business Professionals</em>
+  </footer>
+
+</div>
+</body>
+</html>
