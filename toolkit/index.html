@@ -179,6 +179,7 @@ const methods = [
   {name:"CLEAR",category:"Framework",practiced:false,topics:["Identity","Change","Wellbeing"],note:"Deep emotional and transformational exploration",desc:"Contract, Listen, Explore, Action, Review. Moves through deep listening and exploration of beliefs and emotions. Strong for identity-level change."},
   {name:"GREAT",category:"Framework",practiced:false,topics:["Career","Decisions","Change"],note:"Adds timing as strategic step",desc:"Goal, Reality, Explore, Action, Timing. Like GROW but adds Timing as a dedicated step, ideal when the client's challenge is not just what to do but when and in what order."},
   {name:"Career Framework (Craig & Snook)",category:"Framework",practiced:false,topics:["Career","Identity"],note:"From personal story to leadership purpose",desc:"Guides the client to identify their leadership purpose from their life story, translating key themes into a purpose statement that informs career direction."},
+  {name:"Conflict Facilitation in Coaching",category:"Framework",practiced:false,topics:["Conflict","Relationships","Teams"],note:"Structured coaching approach to interpersonal conflict",desc:"A framework for facilitating conflict between two parties using coaching tools. Helps both parties access their own perspective, hear each other, and find a path forward. Not mediation — a coaching-based process."},
 
   // METHODS
   {name:"Wheel of Life",category:"Method",practiced:true,topics:["Wellbeing","Career","Decisions"],note:"Map satisfaction across life domains",desc:"A visual circle divided into life areas. The client scores each area, revealing where energy is high or low and where coaching focus belongs."},
@@ -216,7 +217,6 @@ const methods = [
   {name:"3 Sides of Organisation",category:"Method",practiced:false,topics:["Teams","Career","Change"],note:"Formal, informal, and shadow structures",desc:"Examines an organisation through three lenses: the formal structure (what is supposed to happen), the informal structure (what actually happens), and the shadow side (what drives everything but is never spoken)."},
   {name:"Bridge Model (Bridges)",category:"Method",practiced:false,topics:["Change","Career"],note:"Ending, neutral zone, new beginning",desc:"Distinguishes between change (external) and transition (internal). Maps three phases: ending, the neutral zone, and new beginning. Useful when a client is grieving a loss while needing to move forward."},
   {name:"I Want / I Can / I Must",category:"Method",practiced:false,topics:["Decisions","Change"],note:"Checks will, ability, and obligation",desc:"Checks three conditions for sustainable action: whether the client truly wants the goal, whether they believe they can achieve it, and whether external conditions allow it. Misalignment in any of the three predicts failure."},
-  {name:"Conflict Facilitation in Coaching",category:"Method",practiced:false,topics:["Conflict","Relationships","Teams"],note:"Structured approach to facilitating conflict between two parties",desc:"Uses coaching tools to help both parties access their own perspective, hear each other, and find a path forward. Not mediation, but a coaching-based process for navigating interpersonal conflict."},
 
   // TOOLS
   {name:"Breathing / Meditation",category:"Tool",practiced:true,topics:["Wellbeing","Stuck"],note:"Somatic regulation",desc:"Short breathing or mindfulness exercises used to ground the client at the start of a session, regulate strong emotion mid-session, or anchor a key insight before closing."},
@@ -603,6 +603,7 @@ function renderArc(type) {
           <div class="arc-grid">
             ${p.items.map(item=>{
               const m = methods.find(m=>m.name===item.name);
+              const pr = m ? m.practiced : false;
               const desc = m ? m.desc : '';
               return `<div class="arc-card${pr?'':' learning'}">
                 <div class="arc-card-top"><h3>${item.name}</h3><span class="card-badge">◎</span></div>
