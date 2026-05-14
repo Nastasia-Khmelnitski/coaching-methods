@@ -13,11 +13,12 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);}
 
-  nav{background:var(--white);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--cream);}
-  .nav-brand{font-family:'DM Serif Display',serif;font-size:15px;color:var(--dark);}
+  nav{background:var(--dark);padding:14px 72px;display:flex;justify-content:flex-start;align-items:center;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
+  .nav-home{font-size:11px;color:var(--sage);letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-weight:600;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:8px;}
+  .nav-home:hover{color:var(--cream);}
   .nav-count{font-size:11px;color:var(--sage);letter-spacing:1px;font-weight:500;}
 
-  .hero{background:var(--dark);padding:80px 40px 60px;min-height:60vh;display:flex;flex-direction:column;justify-content:flex-end;}
+  .hero{background:var(--dark);padding:80px 72px 60px;min-height:60vh;display:flex;flex-direction:column;justify-content:flex-end;}
   .hero-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--sage);margin-bottom:20px;font-weight:500;}
   .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,6vw,72px);font-weight:400;line-height:1.0;color:var(--cream);margin-bottom:8px;}
   .hero h1 em{font-style:italic;color:var(--sage);}
@@ -52,12 +53,12 @@
   .cat-btn.active{background:var(--mid);border-color:var(--mid);color:var(--cream);}
 
   /* Stats */
-  .stats-bar{background:var(--mid);padding:10px 40px;display:flex;gap:24px;align-items:center;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--khaki);}
+  .stats-bar{background:var(--mid);padding:10px 72px;display:flex;gap:24px;align-items:center;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--khaki);}
   .stat-practiced{color:var(--sage);}
   .divider{width:1px;height:12px;background:var(--khaki);opacity:0.3;}
 
   /* Main grid */
-  .grid-area{padding:40px;}
+  .grid-area{padding:40px 72px;}
   .category-section{margin-bottom:52px;}
   .category-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
   .cat-dot{width:6px;height:6px;background:var(--khaki);border-radius:50%;flex-shrink:0;}
@@ -73,18 +74,18 @@
   .card-name{font-family:'DM Serif Display',serif;font-size:15px;color:var(--dark);line-height:1.2;font-weight:400;flex:1;padding-right:8px;}
   .card-badge{font-size:13px;color:var(--sage);flex-shrink:0;}
   .card-note{font-size:11px;color:var(--khaki);margin-bottom:8px;line-height:1.5;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
-  .card-desc{font-size:12px;color:var(--ink);margin-bottom:14px;line-height:1.6;font-weight:300;opacity:0.75;}
-  .card-tags{display:flex;flex-wrap:wrap;gap:4px;}
+  .card-desc{font-size:12px;color:var(--ink);margin-bottom:14px;line-height:1.6;font-weight:300;opacity:0.75;flex:1;}
+  .card-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;}
   .card-tag{font-size:9px;padding:3px 9px;font-weight:500;background:transparent;color:var(--khaki);border:1px solid var(--sage);letter-spacing:0.5px;}
   .empty{padding:80px 40px;text-align:center;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--sage);font-weight:600;}
 
   /* Arc and topic arc views */
   .arc-view{background:var(--white);}
-  .arc-hero{background:var(--dark);padding:48px 40px 40px;}
+  .arc-hero{background:var(--dark);padding:48px 72px 40px;}
   .arc-hero h2{font-family:'DM Serif Display',serif;font-size:clamp(32px,5vw,56px);font-weight:400;color:var(--cream);line-height:1.0;}
   .arc-hero h2 em{font-style:italic;color:var(--sage);}
   .arc-hero p{font-size:12px;color:var(--sage);margin-top:12px;font-weight:300;}
-  .arc-content{padding:40px;}
+  .arc-content{padding:40px 72px;}
   .arc-phase-block{margin-bottom:44px;}
   .arc-phase-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
   .phase-num{font-family:'DM Serif Display',serif;font-size:36px;color:var(--cream);line-height:1;background:var(--mid);padding:4px 14px;flex-shrink:0;}
@@ -102,15 +103,14 @@
   .arc-note{font-size:12px;color:var(--sage);line-height:1.5;font-weight:300;}
   .arc-desc{font-size:11px;color:var(--ink);line-height:1.6;font-weight:300;opacity:0.7;margin-top:8px;}
 
-  footer{background:var(--dark);padding:20px 40px;font-size:10px;color:var(--khaki);letter-spacing:2px;text-transform:uppercase;font-weight:500;border-top:2px solid var(--mid);}
+  footer{background:var(--dark);padding:20px 72px;font-size:10px;color:var(--khaki);letter-spacing:2px;text-transform:uppercase;font-weight:500;border-top:2px solid var(--mid);}
   footer em{color:var(--sage);font-style:normal;}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-brand">Coaching Toolkit</div>
-  <div class="nav-count" id="nav-count"></div>
+  <a class="nav-home" href="../">◎ Home</a>
 </nav>
 
 <div class="hero">
@@ -147,7 +147,7 @@
     <span class="row-label">Category</span>
     <button class="cat-btn" data-cat="Process" onclick="setCat('Process',this)">Process</button>
     <button class="cat-btn" data-cat="Framework" onclick="setCat('Framework',this)">Framework</button>
-    <button class="cat-btn" data-cat="Tool" onclick="setCat('Tool',this)">Tool</button>
+    <button class="cat-btn" data-cat="Tools" onclick="setCat('Tools',this)">Tools</button>
   </div>
 </div>
 
@@ -219,12 +219,12 @@ const methods = [
   {name:"I Want / I Can / I Must",category:"Method",practiced:false,topics:["Decisions","Change"],note:"Checks will, ability, and obligation",desc:"Checks three conditions for sustainable action: whether the client truly wants the goal, whether they believe they can achieve it, and whether external conditions allow it. Misalignment in any of the three predicts failure."},
 
   // TOOLS
-  {name:"Breathing / Meditation",category:"Tool",practiced:true,topics:["Wellbeing","Stuck"],note:"Somatic regulation",desc:"Short breathing or mindfulness exercises used to ground the client at the start of a session, regulate strong emotion mid-session, or anchor a key insight before closing."},
-  {name:"MetaFox Deep Cards (Leading Change)",category:"Tool",practiced:false,topics:["Change","Teams"],note:"52 image and question cards based on Kotter",desc:"52 evocative image cards each paired with a coaching question. Used in teams to open conversations about change, surface resistance, and set direction through imagery."},
-  {name:"Zurich Resource Model Cards",category:"Tool",practiced:true,topics:["Stuck","Identity","Wellbeing"],note:"Physical cards for resource activation",desc:"The physical card set that accompanies the Zurich Resource Model method. Used to help clients identify and tangibly connect with their existing inner resources."},
-  {name:"SMART Goals",category:"Tool",practiced:true,topics:["Career","Decisions"],note:"Converts intentions to commitments",desc:"Turns a vague intention into a Specific, Measurable, Achievable, Relevant, Time-bound commitment. Used at the end of sessions to anchor the client's next step."},
-  {name:"Eisenhower Matrix",category:"Tool",practiced:true,topics:["Career","Stuck"],note:"Urgent vs important prioritization",desc:"A two-axis grid separating tasks into four quadrants. Cuts through overwhelm fast and helps the client see what truly matters versus what only feels urgent."},
-  {name:"Whiteboard Visualization",category:"Tool",practiced:true,topics:["Teams","Career","Change"],note:"Externalizes thinking spatially",desc:"Drawing the client's situation, system, or options on a whiteboard externalizes what is happening in their head, making patterns visible and giving both coach and client something to look at together."},
+  {name:"Breathing / Meditation",category:"Tools",practiced:true,topics:["Wellbeing","Stuck"],note:"Somatic regulation",desc:"Short breathing or mindfulness exercises used to ground the client at the start of a session, regulate strong emotion mid-session, or anchor a key insight before closing."},
+  {name:"MetaFox Deep Cards (Leading Change)",category:"Tools",practiced:false,topics:["Change","Teams"],note:"52 image and question cards based on Kotter",desc:"52 evocative image cards each paired with a coaching question. Used in teams to open conversations about change, surface resistance, and set direction through imagery."},
+  {name:"Zurich Resource Model Cards",category:"Tools",practiced:true,topics:["Stuck","Identity","Wellbeing"],note:"Physical cards for resource activation",desc:"The physical card set that accompanies the Zurich Resource Model method. Used to help clients identify and tangibly connect with their existing inner resources."},
+  {name:"SMART Goals",category:"Tools",practiced:true,topics:["Career","Decisions"],note:"Converts intentions to commitments",desc:"Turns a vague intention into a Specific, Measurable, Achievable, Relevant, Time-bound commitment. Used at the end of sessions to anchor the client's next step."},
+  {name:"Eisenhower Matrix",category:"Tools",practiced:true,topics:["Career","Stuck"],note:"Urgent vs important prioritization",desc:"A two-axis grid separating tasks into four quadrants. Cuts through overwhelm fast and helps the client see what truly matters versus what only feels urgent."},
+  {name:"Whiteboard Visualization",category:"Tools",practiced:true,topics:["Teams","Career","Change"],note:"Externalizes thinking spatially",desc:"Drawing the client's situation, system, or options on a whiteboard externalizes what is happening in their head, making patterns visible and giving both coach and client something to look at together."},
 ];
 
 // Topic arc definitions — thematic sub-sections per topic
@@ -586,7 +586,7 @@ function renderArc(type) {
   document.getElementById("arc-view").style.display = "block";
   const arc = coachingArcs[type];
   document.getElementById("stats").innerHTML = `<span>${arc.meta.h1.replace(/&amp;/g,'&')} ${arc.meta.em} Guide</span>`;
-  document.getElementById("nav-count").textContent = "";
+  // nav-count removed
   document.getElementById("arc-view").innerHTML = `
     <div class="arc-hero">
       <h2>${arc.meta.h1}<br><em>${arc.meta.em}</em></h2>
@@ -626,7 +626,7 @@ function renderTopicArc(topic) {
   const pCount = allMethodsInTopic.filter(m=>m.practiced).length;
   const lCount = allMethodsInTopic.filter(m=>!m.practiced).length;
   document.getElementById("stats").innerHTML = `<span>${topic}: ${allMethodsInTopic.length} methods</span><span class="divider"></span><span class="stat-practiced">✓ ${pCount} practiced</span><span class="divider"></span><span class="stat-practiced" style="color:var(--sage)">◎ ${lCount} to learn</span>`;
-  document.getElementById("nav-count").textContent = "";
+  // nav-count removed
 
   const sectionKeys = sectionLabels.filter(s => sections[s] && sections[s].length > 0);
 
@@ -680,9 +680,9 @@ function render() {
   const lCount = filtered.filter(m=>!m.practiced).length;
   const label  = currentCat ? `${currentCat}: ${filtered.length} methods` : `${filtered.length} methods`;
   document.getElementById("stats").innerHTML = `<span>${label}</span><span class="divider"></span><span class="stat-practiced">✓ ${pCount} practiced</span><span class="divider"></span><span class="stat-practiced" style="color:var(--sage)">◎ ${lCount} to learn</span>`;
-  document.getElementById("nav-count").textContent = `${filtered.length} shown`;
+  // nav-count removed
 
-  const catOrder = ["Process","Framework","Method","Tool"];
+  const catOrder = ["Process","Framework","Method","Tools"];
   const grouped = {};
   catOrder.forEach(c => grouped[c] = []);
   filtered.forEach(m => { if (grouped[m.category]) grouped[m.category].push(m); });
