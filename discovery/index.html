@@ -23,8 +23,8 @@
   /* HEADER — tall, full width, no border */
   .header {
     background: var(--dark);
-    padding: 80px 52px 80px;
-    min-height: 55vh;
+    padding: 80px 72px 80px;
+    min-height: 80vh;
     display: flex; flex-direction: column; justify-content: flex-end;
   }
   .header-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--sage); margin-bottom: 20px; font-weight: 500; }
@@ -34,7 +34,7 @@
   /* PRE-BLOCK — directly after header, full width, no gap */
   .pre-block {
     background: var(--mid);
-    padding: 36px 52px;
+    padding: 36px 72px;
     width: 100%;
   }
   .pre-block-title {
@@ -48,7 +48,7 @@
   .pre-item::before { content: '◎'; position: absolute; left: 0; color: var(--sage); font-size: 11px; top: 2px; }
 
   /* BODY */
-  .body { padding: 48px 52px; }
+  .body { padding: 48px 72px; }
 
   /* SECTION */
   .section { margin-bottom: 48px; }
@@ -119,7 +119,7 @@
   .contract-item::before { content: '◎'; position: absolute; left: 14px; color: var(--sage); font-size: 11px; top: 14px; }
 
   /* FOOTER */
-  footer { background: var(--dark); padding: 16px 52px; font-size: 10px; color: var(--sage); letter-spacing: 2px; text-transform: uppercase; border-top: none; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer { background: var(--dark); padding: 16px 72px; font-size: 10px; color: var(--sage); letter-spacing: 2px; text-transform: uppercase; border-top: none; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   footer em { color: var(--cream); font-style: normal; }
 
   @media (max-width: 600px) {
@@ -136,6 +136,7 @@
 <body>
 
   <div class="header">
+    <a href="../" style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);text-decoration:none;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:auto;">◎ Home</a>
     <div class="header-label">Coaching Tool</div>
     <h1>Discovery<br><em>Coffee Chat</em></h1>
   </div>
